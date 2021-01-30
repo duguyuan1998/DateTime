@@ -13,7 +13,8 @@ public class DateTime {
         System.out.println(localDate.toString());
         // LocalTime获取当前时间
         LocalTime localTime = LocalTime.now();
-        System.out.println(localTime.toString());
+        DateTimeFormatter timeFormat = DateTimeFormatter.ofPattern("HH:mm:ss");
+        System.out.println(localTime.format(timeFormat));
         // LocalDateTime获取当前日期及时间
         LocalDateTime localDateTime = LocalDateTime.now();
         DateTimeFormatter format = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
